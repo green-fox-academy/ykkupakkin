@@ -6,15 +6,12 @@
 
 // for (mi, meddig, mit)
 let sum:number=0;
+let Num:number=5;
 
-for(let i=1;i<=5;i++) {
+for(let i=1;i<=Num;i++) {
     sum=i+sum;
 }
 
 console.log("Sum: "+ sum);
 
-let avg:number=0;
-
-for(let i=1;0;0) {
-    // avg calculation
-}
+console.log("Avg: "+ sum/Num);
