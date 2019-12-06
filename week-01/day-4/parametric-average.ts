@@ -9,7 +9,7 @@ let sum:number=0;
 let Num:number=5;
 
 for(let i=1;i<=Num;i++) {
-    sum=i+sum;
+    sum=sum+i;
 }
 
 console.log("Sum: "+ sum);
