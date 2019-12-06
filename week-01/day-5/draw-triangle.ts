@@ -17,4 +17,4 @@ for(let i=1;i<=lineCount;i++) {
     star=star+"*";
 
     console.log(star);
-}
+} // i'm just writing this line so there will be a change and I can change my commit message and my OCD can rest in peace
