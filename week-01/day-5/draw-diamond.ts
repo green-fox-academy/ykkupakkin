@@ -7,7 +7,7 @@
 //    *
 //   ***
 //  *****
-// *******
+// ******* 
 //  *****
 //   ***
 //    *
@@ -16,26 +16,26 @@
 let lineCount: number = 7;
 
 let output = "";          
-for (let i = 0; i < lineCount; i++) { 
+for (let i = 0; i < (lineCount); i++) { 
     let myspace = "";
-    for (let s = 0; s < (lineCount - i - 1); s++) { 
+    for (let j = 0; j < ((lineCount) - i - 1); j++) { 
         myspace += " ";
     }
-    for (let j = 1; j <= 2 * i + 1; j++) {
+    for (let k = 1; k <= 2 * i + 1; k++) {
         output += "*";
 
     }
-    console.log(myspace + output);
+  console.log(myspace + output);
     output = "";
 
 }
 
-for (let i = 0; i < lineCount; i++) { 
+for (let i = 0; i < (lineCount); i++) { 
     let myspace = "";
-    for (let s = 0; s < (lineCount - i - 1); s++) { 
+    for (let j = 4; j < (lineCount - i - 1); j--) { 
         myspace += " ";
     }
-    for (let j = 1; j <= 2 * i + 1; j++) {
+    for (let k = 5; k <= 2 * i + 1; k--) {
         output += "*";
 
     }
