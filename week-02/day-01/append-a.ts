@@ -5,11 +5,10 @@
 
 let animals:string[] = ["koal", "pand", "zebr"];
 
-
-//let Aanimals: string = 'a';
-
-for (let i: number = 0; i < animals.length; i++) {
- // Aanimals += animals[i];
-  animals[i] = animals[i] + 'a';
-  console.log(animals);
+for(let i: number = 0; i < animals.length; i++) {
+    animals[i] += 'a';
 }
+
+console.log(animals);
+
+
