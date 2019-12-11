@@ -22,3 +22,4 @@ for(let i: number = 0; i < notSoCrypticMessage.length; i++) {
     console.log(hashmap[lyrics]);
 }
 
+// I'm writing this so I can check if my Github works
