@@ -6,17 +6,16 @@
 // In case the program is unable to write the file,
 // It should print the following error message: "Unable to write file: my-file.txt"
 
-const path = '';
+const path = './my-file1.txt';
 const characterEncoding: string = 'utf-8';
-
 let fileContent: string = 'Bence Csoda';
 
-function overWrite(path: string) {
+function overWrite(fileContent: string) {
     const fs = require('fs');
     try {
         fs.writeFileSync(path, fileContent, characterEncoding);
-        //console.log(fileContent);
     } catch(e) {
         console.log("Unable to write file: my-file1.txt");
     }    
 }
+overWrite(fileContent);
