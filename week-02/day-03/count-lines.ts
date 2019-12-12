@@ -4,7 +4,7 @@
 // should not raise any error.
 'use strict';
 
-const path: string = './my-filse.txt'
+const path: string = './my-file.txt'
 const characterEncoding: string = 'utf-8';
 
 function fileSearch(fileName: string) {
