@@ -13,12 +13,12 @@ const width = 600;
 // Draw at least 3 lines with that function using a loop.
 
 function singleLine(x:number, y:number) {
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    for(let i: number = 0; i < 30; i+=5) {
-        ctx.lineTo(width/2+i,heigth/2+i);
+    for(let i: number = 0; i < 300; i+=100) {
+        ctx.beginPath();
+        ctx.moveTo(x, y + i);
+        ctx.lineTo(width/2,(heigth/2));
         ctx.stroke();
     }
 }
 
-singleLine(0, 4);
+singleLine(50, 50);
