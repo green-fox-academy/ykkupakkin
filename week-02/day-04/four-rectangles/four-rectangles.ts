@@ -19,4 +19,4 @@ for(let i:number = 0; i < squareD; i+=squareD/4) {
     ctx.fillRect(20+i*30, (heigth/2), squareWidth + 2 * i, squareHeigth + 2 * i);
 
 }
-
+ 
