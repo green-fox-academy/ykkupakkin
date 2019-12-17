@@ -24,7 +24,7 @@ for (let i = 0; i < lineCount; i++) { //check if we reached the linecount | why 
 
     }
     console.log(myspace + output);
-    //output = "";
+    output = "";
 
 }
 
