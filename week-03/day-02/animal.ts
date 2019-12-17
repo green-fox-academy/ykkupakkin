@@ -12,9 +12,9 @@
 class Animal {
     hunger: number;
     thirst: number;
-    name: string;
+    
   
-    constructor(hunger: number = 50, thirst: number = 50, name: string) {
+    constructor(hunger: number = 50, thirst: number = 50) {
       this.hunger = hunger;
       this.thirst = thirst;
     }
@@ -26,17 +26,16 @@ class Animal {
         this.thirst--;
         
       }
-    play(name: string): void {
+    play(): void {
         this.hunger++;
         this.thirst++;
-        this.name = name;
     }
 
     }
     
-let a1 = new Animal(0,0,"Kecske");
+let a1 = new Animal();
     
-a1.play("Kecske");
+a1.play();
 console.log(a1);
 a1.drink();
 console.log(a1);

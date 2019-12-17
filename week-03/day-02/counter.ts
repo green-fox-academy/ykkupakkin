@@ -11,9 +11,11 @@
 
 class Counter {
     integer : number;
+    startNum : number;
 
     constructor(integer: number = 0) {
         this.integer = integer;
+        this.startNum = integer;
     }
 
     add(input?:number): void {
@@ -21,17 +23,23 @@ class Counter {
             this.integer++;
         } else {
             this.integer += input;
-        }
+        } 
     }
 
-    get(): void {
-        //..
+    get(): string {
+        return "number " + this.integer;
     }
 
+    reset(): number {
+        return this.integer = this.startNum;
+    }
 
 }
 
-let newCounter = new Counter(5);
+let newCounter = new Counter();
 
 newCounter.add(5);
-console.log(newCounter);
+console.log(newCounter.get());
+newCounter.reset();
+newCounter.add(10);
+console.log(newCounter.get());
