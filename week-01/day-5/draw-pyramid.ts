@@ -16,10 +16,10 @@ let lineCount: number = 4;
 let output:string = "";          //we set an empty output string
 for (let i = 0; i < lineCount; i++) { //check if we reached the linecount | why do we define the variable empty?
     let myspace:string = "";
-    for (let s = 0; s < (lineCount - i - 1); s++) { // we set a number because its easier than string, 
+    for (let j = 0; j < (lineCount - i - 1); j++) { // we set a number because its easier than string, 
         myspace += " ";
     }
-    for (let j = 1; j <= 2 * i + 1; j++) {
+    for (let k = 1; k <= 2 * i + 1; k++) {
         output += "*";
 
     }
