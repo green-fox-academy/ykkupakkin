@@ -1,0 +1,31 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'cache', 'clean', '-f' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 warn using --force I sure hope you know what you are doing.
+5 silly ls normalized .
+6 silly gentlyRm /home/ykkupakkin/.npm/_cacache is being purged
+7 verbose gentlyRm don't care about contents; nuking /home/ykkupakkin/.npm/_cacache
+8 silly gentlyRm /home/ykkupakkin/.npm/registry.npmjs.org is being purged
+9 verbose gentlyRm don't care about contents; nuking /home/ykkupakkin/.npm/registry.npmjs.org
+10 silly vacuum-fs purging /home/ykkupakkin/.npm/_cacache
+11 silly vacuum-fs purging /home/ykkupakkin/.npm/registry.npmjs.org
+12 silly vacuum-fs quitting because other entries in /home/ykkupakkin/.npm
+13 verbose stack Error: EACCES: permission denied, rmdir '/home/ykkupakkin/.npm/_cacache/index-v5'
+14 verbose cwd /home/ykkupakkin/Desktop/GFA/ykkupakkin/hangman
+15 error Linux 5.0.0-37-generic
+16 error argv "/usr/bin/node" "/usr/bin/npm" "cache" "clean" "-f"
+17 error node v8.10.0
+18 error npm  v3.5.2
+19 error path /home/ykkupakkin/.npm/_cacache/index-v5
+20 error code EACCES
+21 error errno -13
+22 error syscall rmdir
+23 error Error: EACCES: permission denied, rmdir '/home/ykkupakkin/.npm/_cacache/index-v5'
+23 error  { Error: EACCES: permission denied, rmdir '/home/ykkupakkin/.npm/_cacache/index-v5'
+23 error   errno: -13,
+23 error   code: 'EACCES',
+23 error   syscall: 'rmdir',
+23 error   path: '/home/ykkupakkin/.npm/_cacache/index-v5' }
+24 error Please try running this command again as root/Administrator.
+25 verbose exit [ -13, true ]

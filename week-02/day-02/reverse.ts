@@ -3,13 +3,10 @@
 // Use it on this reversed string to check it!
 
 let reversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI`;
-//console.log(reverse(reversed));
 
-let normal = reversed.split(""); // split string on comma space
+
+let normal = reversed.split(""); 
 console.log(normal.reverse().join(""));
-
-
-//export = reverse;
 
 
 
