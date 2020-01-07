@@ -1,27 +1,30 @@
 'use strict';
 
-class Cohort {
-    name: string;
-    students: string; // list of students
-    mentors: string; // list of mentors
+import { Student } from './student';
+import { Mentor } from './mentor';
 
-constructor(name: string, students: string[], mentors: string[]) {
+export class Cohort {
+    name: string;
+    students: Student[] = [];
+    mentors: Mentor[] = [];
+
+constructor(name: string) {
     this.name = name;
-    this.students = Student.name;
-    this.mentors = Mentor.name;
+    this.students = [];
+    this.mentors = [];
 }
 
 
 addStudent(Student) {
-    // adds the given Student to students list
+   this.students.push(new Student);
 }
 
 addMentor(Mentor)  {
-    // adds a mentor to the mentors list
+    this.mentors.push(new Mentor);
 }
 
 info() {
-    console.log('The ' + this.name + ' cohort has ' + Student.size + ' students and ' + Mentor.size + ' mentors.')
+    console.log('The ' + this.name + ' cohort has ' + this.students.length + ' students and ' + this.mentors.length + ' mentors.')
 }
 }
 

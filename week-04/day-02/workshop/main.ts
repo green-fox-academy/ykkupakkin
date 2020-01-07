@@ -1,5 +1,11 @@
 'use strict';
 
+import { Person } from './person';
+import { Student } from './student';
+import { Sponsor } from './sponsor';
+import { Mentor } from './mentor';
+import { Cohort } from './cohort';
+
 let people = [];
 
 let mark = new Person('Mark', 46, 'male');

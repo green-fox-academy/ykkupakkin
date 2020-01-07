@@ -1,18 +1,19 @@
-"use strict";
+'use strict';
 
+import { Person} from './person';
 
-class Sponsor extends Person {
+export class Sponsor extends Person {
     company: string;
     hiredStudents: number;
 
-    constructor(company: string = "Google", hiredStudents: number = 0){
-      super();
+    constructor(name: string = "Jane Doe", age: number = 30, gender: string = "female", company: string = "Google", hiredStudents: number = 0){
+      super(name, age, gender);
       this.company = company;
       this.hiredStudents = hiredStudents;
     }
 
     introduce() { 
-      console.log("Hi, I'm " + this.name + " a " + this.age + " year old " + this.gender + " who represents " + this.company + "and hired " + this.hiredStudents + "students so far. ");
+      console.log("Hi, I'm " + this.name + " a " + this.age + " year old " + this.gender + " who represents " + this.company + " and hired " + this.hiredStudents + " students so far. ");
     }
 
     hire() {

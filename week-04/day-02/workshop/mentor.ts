@@ -1,12 +1,13 @@
-"use strict";   
+'use strict';   
 
+import { Person} from './person';
 
-class Mentor extends Person { 
+export class Mentor extends Person { 
     level: string;
    
 
-    constructor(level: string = "intermediate"){
-        super();
+    constructor(name: string = "Jane Doe", age: number = 30, gender: string = "female", level: string = "intermediate"){
+        super(name, age, gender);
         this.level = level;
 
     }
@@ -19,4 +20,3 @@ class Mentor extends Person {
         console.log("Hi, I'm " + this.name + " a " + this.age + " year old " + this.gender +  this.level + " mentor.");
     }
 }
-
