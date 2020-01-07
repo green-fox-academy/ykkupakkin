@@ -22,7 +22,7 @@ export class Student {
     }
 
     introduce(): void{
-        console.log("Hi, I'm " + Person.name + " a " + Person.age + "year old " + Person.gender + " from" + this.previousOrganization +" who skipped" + this.skippedDays + "days from the course already.");
+        console.log("Hi, I'm " + Person.name + " a " + Person.age + " year old " + Person.gender + " from " + this.previousOrganization +" who skipped " + this.skippedDays + " days from the course already.");
     }
 
     skipDays(numberOfDays: number){
