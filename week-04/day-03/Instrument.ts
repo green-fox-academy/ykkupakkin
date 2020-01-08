@@ -2,15 +2,18 @@
 
 abstract class Instrument{
     name: string;
+    numberOfString: number;
 
     constructor(name: string) {
         this.name = name;
     }
-
-    play(){
-        console.log(this.name + ' is played');
-        console.log('and it\'s sounds like: ' + this.sound());
+    
+    sound(): void{
     }
+   
+    play(): void{
+        console.log(this.name + ', a ' + this.numberOfString + ' stringed instrument that goes ' + this.sound());
+    }   
 }
 
 abstract class StringedInstrument extends Instrument {
@@ -23,7 +26,6 @@ abstract class StringedInstrument extends Instrument {
     }
     
    sound(): void{
-    console.log();
    }
 }
 
@@ -31,12 +33,13 @@ class ElectricGuitar extends StringedInstrument {
 
     numberOfString: number;
 
-    constructor(name: string, numberOfString: number = 6) {
-        super(name, numberOfString);
+    constructor(numberOfString: number = 6) {
+        super('Electric Guitar', numberOfString);
+        this.numberOfString = numberOfString;
     }
 
-    sound(): void {
-        console.log('Twang');
+    sound(): string {
+        return 'Twang'
     }
 }
 
@@ -44,13 +47,13 @@ class BassGuitar extends StringedInstrument {
 
     numberOfString: number;
 
-    constructor(name: string, numberOfString: number = 4) {
-       super(name, numberOfString);
+    constructor(numberOfString: number = 4) {
+       super('Bass Guitar', numberOfString);
        this.numberOfString = numberOfString;
     }
 
-    sound(): void {
-        console.log('Duum-duum-duum');
+    sound(): string {
+        return 'Duum-duum-duum'
     }
 }
 
@@ -58,13 +61,13 @@ class Violin extends StringedInstrument {
 
     numberOfString: number;
 
-    constructor(name: string, numberOfString: number = 4) {
-       super(name, numberOfString);
+    constructor(numberOfString: number = 4) {
+       super('Violin', numberOfString);
        this.numberOfString = numberOfString;
     }
 
-    sound(): void {
-        console.log('Screech');
+    sound(): string {
+        return 'Screech'
     }
 }
 
