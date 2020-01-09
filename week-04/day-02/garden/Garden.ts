@@ -23,27 +23,29 @@ class Garden{
     }
 }
 
-class Plantation {
+class Plant {
   color: string;
   waterLevel: number;
   waterAbsorb: number;
   waterInput: number;
+  plantType: string;
 
-  constructor(color: string, waterLevel: number, waterAbsorb: number, waterInput: number) {
+  constructor(color: string, waterLevel: number = 0, waterAbsorb: number = 1, waterInput: number = 0, plantType: string) {
     this.color = color;
     this.waterAbsorb = waterAbsorb;
     this.waterInput = waterInput;
     this.waterLevel = waterLevel;
+    this.plantType = plantType;
   }
 }
 
 
-class Tree extends Plantation {
+class Tree extends Plant {
   color: string;
   waterLevel: number;
 
   constructor(color: string, waterLevel: number = 0){
-    super(color, waterLevel, waterAbsorb, waterInput);
+    super(color, waterLevel, waterAbsorb, waterInput, plantType);
     this.color = color;
     this.waterLevel = waterLevel;
   }
@@ -54,7 +56,7 @@ class Tree extends Plantation {
   }
 }
 
-class Flower extends Plantation {
+class Flower extends Plant {
   color: string;
   waterLevel: number;
 
