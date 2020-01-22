@@ -5,8 +5,11 @@
 let reversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI`;
 
 
-let normal = reversed.split(""); 
-console.log(normal.reverse().join(""));
+function reverse(): string {
+  console.log(reversed.split("").reverse().join(""));
+  return reversed;
+}
 
+reverse();
 
 
