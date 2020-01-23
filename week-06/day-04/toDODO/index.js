@@ -8,8 +8,9 @@ app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 
 app.get('/', (req, res) => {
-  res.sendfile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
+
 
 app.get('/webshop', (req, res) => {
   res.render('home', {
