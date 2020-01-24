@@ -13,7 +13,7 @@
     <!-- Images used to open the lightbox -->
     <div class="row">
         <div class="column">
-            <img src="images/image1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            <img src="images/image2.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
         </div>
         <div class="column">
             <img src="images/image3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
@@ -39,7 +39,7 @@
 
             <div class="mySlides">
                 <div class="numbertext">1 / 7</div>
-                <img src="images/image1big.jpg" style="width:100%">
+                <img src="images/image2big.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
@@ -83,7 +83,7 @@
 
             <!-- Thumbnail image controls -->
             <div class="column">
-                <img class="demo" src="images/image1.jpg" onclick="currentSlide(1)" alt="Image1">
+                <img class="demo" src="images/image2.jpg" onclick="currentSlide(1)" alt="image2">
             </div>
 
             <div class="column">
@@ -137,7 +137,7 @@
         }
 
         function showSlides(n) {
-            let i;
+            let i = 0;
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("demo");
             let captionText = document.getElementById("caption");
