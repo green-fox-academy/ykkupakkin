@@ -1,38 +1,49 @@
-let students = [
-    { name: "Mary", score: 90, school: "East" },
-    { name: "Steve", score: 100, school: "East" },
-    { name: "James", score: 40, school: "East" },
-    { name: "Gabe", score: 90, school: "West" },
-    { name: "Rachel", score: 85, school: "East" },
-    { name: "Rochelle", score: 95, school: "West" },
-    { name: "Lynette", score: 75, school: "East" }
-];
+'use strict';
 
-let processStudents = function(data, callback) {
-    for (let i = 0; i < data.length; i++) {
-        if (data[i].school.toLowerCase() === "east") {
-            if (typeof callback === "function") {
-                callback(data[i]);
-            }
-        }
+const mapWith = (array, callback) => {
+    let output = [];
+    for (let i = 0; i < array.length; i++) {
+        output.push(callback(array[i]));
     }
-};
 
-processStudents(students, function(obj) {
-    if (obj.score > 60) {
-        console.log(`${obj.name} has passed.`);
-    }
-});
+    // The mapWith() function should iterate over the given array and call the callback function on every element.
+    // It stores the callback return values in the output.
+    // The mapWith() should return with the output array.
 
-let determineTotal = function() {
-    let total = 0,
-        count = 0;
-
-    processStudents(students, function(obj) {
-        total = total + obj.score;
-        count++;
-    });
-    console.log(`School: ${students[0].school}\nTotal score: ${total}\nTotal Count: ${count}`);
+    return output;
 }
 
-determineTotal();
+const addOne = (number) => {
+    return number + 1;
+}
+console.log(mapWith([1, 2, 3], addOne));
+console.log(mapWith([1, 2, 3], (a) => a * 10));
+
+// Exercise 1:
+
+// The callback is only defined when we call the function.
+//expected result: [2, 3, 4]
+
+// Exercise 2:
+
+//const secondElement = words[0].split('')[1];
+// Create a callback function which removes every second character from a string
+const words = ['map', 'reduce', 'filter'];
+
+const removeSecondLetter = function(array) {
+    let output = '';
+    for (let i = 0; i < array.length; i++) {
+        if (i % 2 === 0) {
+            output += array.charAt(i);
+        }
+    }
+    return output;
+}
+
+
+// this take the NTH char and slice there.
+//let str = 'almafa'
+//console.log(str.slice(0, 3) + str.slice(4, str.length));
+
+console.log(mapWith(words, removeSecondLetter));
+// expected result: ['mp','rdc', 'fle']
