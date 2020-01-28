@@ -17,7 +17,8 @@
 // thePets[1].favFood // -- Carrots
 let pageCounter = 1;
 let animalContainer = document.getElementById('animal-info');
-let btn = document.getElementById('btn');
+let btn = document.getElementById('btnGET');
+let outOfClicks = document.getElementsByClassName('generated');
 
 btn.addEventListener('click', function() {
     let url = `https://learnwebcode.github.io/json-example/animals-${pageCounter}.json`
@@ -26,7 +27,7 @@ btn.addEventListener('click', function() {
     ourRequest.open('GET', url);
     ourRequest.onload = function() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {
-            var ourData = JSON.parse(ourRequest.responseText);
+            let ourData = JSON.parse(ourRequest.responseText);
             renderHTML(ourData);
         } else {
             console.log("We connected to the server, but it returned an error.");
@@ -49,10 +50,10 @@ function renderHTML(data) {
     let htmlString = '';
 
     for (let i = 0; i < data.length; i++) {
-        htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat ";
+        htmlString += `<p>${data[i].name} is a ${data[i].species} that likes to eat`;
 
         for (let j = 0; j < data[i].foods.likes.length; j++) {
-            if (j == 0) {
+            if (j === 0) {
                 htmlString += data[i].foods.likes[j];
             } else {
                 htmlString += ` and ${data[i].foods.likes[j]}`;
