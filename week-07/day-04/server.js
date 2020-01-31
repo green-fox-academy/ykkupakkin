@@ -62,57 +62,47 @@ app.get("/books1", (req, res) => {
        WHERE category.cate_descrip=? AND book_mast.cate_id=category.cate_id;`,
       [req.query.category],
       (err, rows) => {
-        console.log(err);
-        if (err !== null) {
-          res.sendStatus(500);
-          return;
-        }
-        rows.forEach(e => {
-          titles.push(e.book_name);
-        });
+          for(let i = 0; i < rows.length; i++) {
+              titles.push(e.book_name);
+            };
         res.send(titles);
-      }
-    );
+      });
   } else if (req.query.publisher) {
-    query = `
-        SELECT book_mast.book_name
+    query = 
+       `SELECT book_mast.book_name
         FROM book_mast,publisher
         WHERE publisher.pub_name=? AND book_mast.pub_id=publisher.pub_id;`;
     params = [req.query.publisher];
   } else if (req.query.plt) {
     conn.query(
-      `
-        SELECT book_mast.book_name, book_mast.book_price
+       `SELECT book_mast.book_name, book_mast.book_price
         FROM book_mast 
-        WHERE book_mast.book_price<?';`,
+        WHERE book_mast.book_price<?;`,
       [req.query.plt],
       (err, rows) => {
-        rows.forEach(e => {
-          titles.push(e.book_name);
-        });
-        res.send(titles);
-      }
-    );
+        for(let i = 0; i < rows.length; i++) {
+            titles.push(e.book_name);
+          };
+      res.send(titles);
+    });
   } else if (req.query.pgt) {
     conn.query(
-      `
-        SELECT book_mast.book_name, book_mast.book_price
+       `SELECT book_mast.book_name, book_mast.book_price
         FROM book_mast
         WHERE book_mast.book_price>?;`,
       [req.query.pgt],
       (err, rows) => {
-        rows.forEach(e => {
-          titles.push(e.book_name);
-        });
-        res.send(titles);
-      }
-    );
-  }
-  conn.query(query, params, (err, rows) => {
-    rows.forEach(e => {
-      titles.push(e.book_name);
+        for(let i = 0; i < rows.length; i++) {
+            titles.push(e.book_name);
+          };
       res.send(titles);
     });
+  };
+  conn.query(query, params, (err, rows) => {
+    for(let i = 0; i < rows.length; i++) {
+        titles.push(e.book_name);
+      };
+  res.send(titles);
   });
 });
 
