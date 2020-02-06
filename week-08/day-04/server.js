@@ -6,10 +6,10 @@ const PORT = 3000;
 const mysql = require("mysql");
 
 const conn = mysql.createConnection({
-  host: "localhost",
+  host: "culpaeus-reddit.ctxbh8rmdttq.eu-central-1.rds.amazonaws.com/",
   user: "ykkupakkin",
-  password: "almakortebanan",
-  database: "bookstore"
+  password: "password1234",
+  database: "Ykkupakkin"
 });
 
 app.set("view engine", "ejs");
@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
   res.render("index", {
     title: "Hello Kiskutya"
   });
+});
+
+app.get("/gallery", (req, res) => {
+  res.send('gallery.html');
 });
 
 app.get("/titles", (req, res) => {
@@ -114,6 +118,6 @@ conn.connect(err => {
   console.log("Anton found his way");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
   console.log("You have awaken, the Son of Anton.");
 });
