@@ -12,7 +12,7 @@ describe('GET /groot', () => {
       .end((err, res) => {
         expect(err).to.be.null;
 
-        expect(res.body.message).to.equal('I am Groot!');
+        expect(res.body.message).to.equal({"error":"I am Groot!"});
 
         done();
       });

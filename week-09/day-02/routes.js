@@ -7,8 +7,8 @@ app.get("/", (req, res) => {
 
 app.get("/groot", (req, res) => {
   if (!req.query.message) {
-    res.status(200).json({
-      error: `I am Groot!`
+    res.status(404).json({
+      error: 'I am Groot!'
     });
   } else {
     res.status(200).json({
