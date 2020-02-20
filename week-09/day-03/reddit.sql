@@ -2,7 +2,7 @@ CREATE TABLE posts (
 	id INT NOT NULL AUTO_INCREMENT,
 	title VARCHAR(50),
 	url VARCHAR(100),
-	timestamp INT,
+	timestamp BIGINT,
 	score INT DEFAULT 0,
 	owner VARCHAR(50) DEFAULT '',
 	vote INT DEFAULT 0,
