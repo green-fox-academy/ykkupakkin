@@ -1,0 +1,129 @@
+body{
+  background-color: magenta;
+}
+
+/* HEADER STYLE */
+
+header{
+  background-image: url(../palpi.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 20%;
+  background-color: black;
+  height: 30vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header > h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* FULL PAGE CONTAINER */
+
+article{
+  display: flex;
+  justify-content: center; 
+}
+
+/* POST CONTAINER */
+
+main{
+  margin: 0 10px 10px 10px;
+  width: 60%;
+  border-radius: 3px;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+  font-size: 1em;
+  width: 100%;
+  margin: 30 30 30px 0;
+  padding: 0px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+/* RIGHT SIDEBAR STYLE */
+
+aside{
+  width: 20%;
+  margin-right: 10px;
+}
+
+h4 {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+aside > button {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+aside > button:hover{
+  filter: brightness(120%)
+}
+
+.aside-content {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.aside-content > h2 {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
