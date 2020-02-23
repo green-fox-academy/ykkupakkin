@@ -59,13 +59,14 @@ app.post("/posts", (req, res) => {
   const id = 0;
   const title = req.body.title;
   const url = req.body.url;
+  const owner = req.body.owner;
   const timestamp = Date.now();
   const score = 0;
   conn.query(
     `INSERT INTO posts 
-     (title, url, timestamp, score) 
-     VALUES (?, ?, ?, ?);`,
-    [title, url, timestamp, score],
+     (title, url, timestamp, score, owner) 
+     VALUES (?, ?, ?, ?, ?);`,
+    [title, url, timestamp, score, owner],
     (err, rows) => {
       if (err) {
         res.status(500).send("Database error!");
@@ -77,7 +78,8 @@ app.post("/posts", (req, res) => {
         title: title,
         url: url,
         timestamp: timestamp,
-        score: score
+        score: score,
+        owner: owner
       });
       console.log("New Post Created");
     }

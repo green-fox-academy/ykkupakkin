@@ -10,22 +10,23 @@
     @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
     </style>
 </head>
-<body>
-  <center>
-  <p>HELLLLLLOOOOOO</p>
-  <button>MIVAAAAAN</button>
+<body style="background-color: magenta; color: whitesmoke; text-align: center;">
+  <script src='index.js'></script>
+  <h1>HELLLLLLOOOOOO</h1>
+  <form action='/posts' method='GET'>
+    <button id='posts'>MIVAAAAAN POSTOK</button>
+  </form>
+  <h2><q>Don't use br because puppy would die then. Use a meaningless quote instead.</q></h2>
   <form action='/posts' method='POST'>
-    title:
-    <input name='title'>
-    url:
-    <input name='url' type='url'>
-    owner:
-    <input name='owner'>
+    <h3>title:</h3>
+    <input name='title' value='What you want?'>
+    <h3>url:</h3>
+    <input name='url' type='url' value='Insert valid URL'>
+    <h3>owner:</h3>
+    <input name='owner' value='Who did this?'>
     <button type='submit'>SABMUT</button>
   </form>
-</center>
   <div class='mainContainer'></div>
-  <script src='index.js'></script>
 </body>
 </html>
 
