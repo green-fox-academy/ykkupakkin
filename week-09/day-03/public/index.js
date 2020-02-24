@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // window.onload = () => {
 //   let allPost = new XMLHttpRequest();
@@ -8,7 +8,7 @@
 //     if(response.target.status === 200) {
 //       let resultObject = JSON.parse(response.target.response);
 //       resultObject.forEach(post => {
-//         document.querySelector('.mainContainer').appendChild(post)
+//         document.querySelector('.posts').appendChild(post);
 //       });
 //     };
 //   };
@@ -19,12 +19,39 @@
 //   return currentPost;
 // };
 
-// const mainContent = document.querySelector('main');
+// const mainContent = document.querySelector('posts');
 
-// fetch('/posts')
-//   .then(res => res.text())
-//   .then(console.log(res.text()))
-//   .then(content => mainContent.innerText = content);
+// const getPosts = () => {
+//   fetch('http://localhost:3000/posts')
+//   .then((result) => result.json())
+//   (console.log(result.json()))
+//   //.then(content => mainContent.innerText = content);
+// };
+
+// getPosts();
+
+fetch("http://localhost:3000/posts")
+  .then(function(response) {
+    if (response.status !== 200) {
+      console.log(
+        "Looks like there was a problem. Status Code: " + response.status
+      );
+      return;
+    }
+    // Examine the text in the response
+    response.json().then(function(data) {
+      data.forEach(post => {
+        let posts = document.querySelector(".posts")
+        let pharagraph = document.createElement('p');
+        pharagraph.innerText = post.title;
+        pharagraph.innerText += post.url;
+        posts.appendChild(pharagraph);
+      });
+    });
+  })
+  .catch(function(err) {
+    console.log("Fetch Error :-S", err);
+  });
 
 // const myInit = {
 //   method: 'GET',
@@ -78,17 +105,11 @@
 //   postsSection.appendChild(section);
 // };
 
+// let BTN = document.getElementsByClassName('submitBTN')[0];
 
-let button = document.getElementsByClassName('submitBTN')[0];
+// function clickNewpost(post) {
+//   console.log(post);
+//     window.location = '/newpost';
+// };
 
-function clickNewpost(post) {
-  console.log(post);
-    window.location = '/newpost';
-};
-
-button.addEventListener('click', () => clickNewpost('newPost'));
-
-let paragraph = document.createElement('p');
-
-
-  
+// BTN.addEventListener('click', () => clickNewpost('newPost'));

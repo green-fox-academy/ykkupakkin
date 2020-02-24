@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const PORT = 3000 || 8080;
+const bodyParser= require('body-parser');
 require("dotenv").config();
 
 // -- Connect to the database
@@ -26,7 +27,8 @@ conn.connect(error => {
 });
 
 // -- Express configuration & EJS
-app.use(express.urlencoded()); // -- Look after
+app.use(bodyParser.urlencoded());
+app.use(express.urlencoded()); 
 app.use(express.json()); // -- Body Parser
 app.use(express.static("public"));
 app.set("view engine", "ejs");
