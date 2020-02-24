@@ -1,7 +1,7 @@
 body{
   background-color: white;
-  max-width: 600px;
-  height: 400px;
+  max-width: 800px;
+  height: 600px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,14 @@ body{
   flex: 1;
 }
 
+.controlPanel audio {
+  width: 100%;
+}
+.controls{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+}
 .playlistheader{
   background: yellow;
   flex:1;
