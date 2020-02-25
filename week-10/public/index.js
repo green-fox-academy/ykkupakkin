@@ -1,5 +1,6 @@
 'use strict';
 
+// --- Next and Previous controls
 let _player = document.getElementById("player"),
     _playlist = document.getElementById("playlist"),
     _stop = document.getElementById("stop");
