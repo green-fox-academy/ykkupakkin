@@ -5,8 +5,8 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const PORT = 3000 || 8080;
-const bodyParser = require('body-parser');
 require('dotenv').config();
+const fetchVideoInfo = require('youtube-info');
 
 
 // -- Connect to the database
@@ -28,8 +28,7 @@ conn.connect(error => {
 });
 
 // -- Express configuration & EJS
-app.use(bodyParser.urlencoded());
-app.use(express.urlencoded()); 
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(express.static("public"));
 
@@ -40,6 +39,14 @@ app.get("/", (req, res) => {
 
 app.get("/hello", (req, res) => {
   res.status(418).send("Hello World");
+});
+
+app.get('/random', (req, res)=>{
+  fetchVideoInfo('2ih0CluTjFg')
+  .then((videoInfo) => {
+    console.log(videoInfo.title, videoInfo.url, videoInfo.views);
+    res.send(videoInfo);
+  });
 });
 
 

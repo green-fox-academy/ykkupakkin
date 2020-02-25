@@ -18,9 +18,10 @@
       <div class="tracks">
           <div class="currentplay">
               <p>current playing</p>
+              <p class='currentPlay'></p>
           </div>
         <p>tracks</p>
-        <ul id="playlist">
+        <ol id="playlist">
           <li class="selected" data-ogg="../music/shöckface, b-dos - floating (feat. amethyst).mp3">shöckface, b-dos - floating (feat. amethyst)</li>  
           <li data-ogg="../music/Skrybe - I Will End Where He Begins (Feat SHAE).mp3">Skrybe - I Will End Where He Begins (Feat SHAE)</li>
           <li data-ogg="../music/AWEN - Flame.mp3">AWEN - Flame</li>
@@ -28,7 +29,7 @@
           <li data-ogg="../music/Wiguez - Nine Roses.mp3">Wiguez - Nine Roses</li>
           <li data-ogg="../music/aUtOdiDakT & Hotcaller - I Burn.mp3">aUtOdiDakT & Hotcaller - I Burn</li>
           <li data-ogg="../music/BOXINBOX - Oh Ne (Audio).mp3">BOXINBOX - Oh Ne</li>
-        </ul>
+        </ol>
       </div>
     </div>
 
@@ -42,8 +43,8 @@
       </audio>
       <div class='controls'>
       <input type='image' src='../img/play.svg' id='stop'>
-      <input type='image' src='../img/forward.svg' id='next' onclick="playNext()">
       <input type='image' src='../img/rewind.svg' id='previous' onclick="playPrevious()">
+      <input type='image' src='../img/forward.svg' id='next' onclick="playNext()">
       <!-- <button id="stop">Play/Pause</button> -->
       <!-- <button id="next" onclick="playNext()">Next</button> -->
       <!-- <button id="previous" onclick="playPrevious()">Previous</button> -->

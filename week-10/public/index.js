@@ -1,6 +1,6 @@
 'use strict';
 
-// --- Next and Previous controls
+// --- Begin of Previous & Next
 let _player = document.getElementById("player"),
     _playlist = document.getElementById("playlist"),
     _stop = document.getElementById("stop");
@@ -45,3 +45,12 @@ _playlist.addEventListener("click", function (e) {
         playlistItemClick(e.target);
     }
 });
+// -- End of Previous & Next
+
+let selected = document.getElementsByClassName('selected');
+let currentPlayP = document.getElementsByClassName('currentPlay');
+let currentPlay = document.createElement('p');
+currentPlay.innerText = selected;
+//currentPlayP.appenChild(currentPlay);
+
+console.log(selected, currentPlayP, currentPlay)
