@@ -28,6 +28,11 @@ body{
  flex-direction: row;
  justify-content: space-around;
 }
+
+.controls input {
+  width: 15px;
+  height: 15px;
+}
 .playlistheader{
   background: yellow;
   flex:1;

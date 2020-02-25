@@ -34,29 +34,20 @@
 
     <div class="controlPanel">
       <p>controlpanel</p>
-      <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-      </script>-->
              
       
-      <audio id="player" controls>
-        <source src='../music/shöckface, b-dos - floating (feat. amethyst).mp3' type='audio/mp3'>
-          <!--<source src='../music/Skrybe - I Will End Where He Begins (Feat SHAE).mp3' type='audio/mp3'>
-          <source src='../music/AWEN - Flame.mp3' type='audio/mp3'>-->
+      <audio id="player">
+        <!--<source src='../music/shöckface, b-dos - floating (feat. amethyst).mp3' type='audio/mp3'>-->
         Your browser does not support the audio element.
       </audio>
       <div class='controls'>
-      <button id="stop">Play/Pause</button>
-      <button id="next" onclick="playNext()" >Next</button>
-      <button id="previous" onclick="playPrevious()">Previous</button>
+      <input type='image' src='../img/play.svg' id='stop'>
+      <input type='image' src='../img/forward.svg' id='next' onclick="playNext()">
+      <input type='image' src='../img/rewind.svg' id='previous' onclick="playPrevious()">
+      <!-- <button id="stop">Play/Pause</button> -->
+      <!-- <button id="next" onclick="playNext()">Next</button> -->
+      <!-- <button id="previous" onclick="playPrevious()">Previous</button> -->
     </div>
-      <!--<form action='test.html' method='GET'>
-        <fieldset>
-          <legend>Testing Custom Buttons</legend>
-          <input type='text' name='username'>
-          <input type='image' src='img/rewind.svg' alt='rewind'>
-        </fieldset>
-      </form>-->
-      
     </div>
     <script src='index.js'></script>
   </body>
