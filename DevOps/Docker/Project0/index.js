@@ -2,11 +2,12 @@
 
 const express = require('express');
 const app = express();
+const PORT = 8081;
 
 app.get('/', (req, res) => {
         res.send('Hello World');
 });     
 
-app.listen(8081, () => {
-        console.log('Server Up');
+app.listen(PORT, () => {
+        console.log(`Server Up ${PORT}`);
 });       
