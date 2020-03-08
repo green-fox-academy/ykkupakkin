@@ -9,10 +9,11 @@ const PORT = 3000 || 8081
 // -- Express configuration
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
 // -- Endpoint
 app.get('/', (req, res) => {
-  res.sendFile('index.html');
+  res.status(200).sendFile(__dirname + '/index.html');
 });
 
 app.get("/hello", (req, res) => {
