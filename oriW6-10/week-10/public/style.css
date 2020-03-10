@@ -1,0 +1,57 @@
+body{
+  background-color: white;
+  max-width: 800px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.player{
+  background-color: red;
+  display:flex;
+  flex-direction: row;
+  flex: 3;
+}
+
+.controlPanel{
+  background-color: lightblue;
+  flex: 1;
+}
+
+.controlPanel audio {
+  width: 100%;
+}
+.controls{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+
+.controls input {
+  width: 15px;
+  height: 15px;
+}
+.playlistheader{
+  background: yellow;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracks{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist{
+  flex:1;
+  background: pink;
+}
+
+.currentplay{
+  background: orange;
+
+}

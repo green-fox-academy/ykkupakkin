@@ -1,0 +1,25 @@
+{
+  "name": "dodo",
+  "version": "1.0.0",
+  "description": "Best application ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Ykkupakkin"
+  },
+  "keywords": [
+    "free",
+    "money"
+  ],
+  "author": "Satoshi Nakamoto",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "tape": "^4.13.0"
+  }
+}
